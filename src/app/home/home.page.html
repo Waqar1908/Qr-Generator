@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>QR Code Generator</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card class="qr-card">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Generate QR Code</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-input [(ngModel)]="qrText" placeholder="Enter text to generate QR"></ion-input>
+      </ion-item>
+
+      <div class="qr-preview" *ngIf="qrText">
+        <div #qrcodeEl>
+          <qrcode [qrdata]="qrText" [width]="200" [errorCorrectionLevel]="'M'" [elementType]="'svg'"></qrcode>
+        </div>
+      </div>
+
+
+      <div class="download-btn" *ngIf="qrText">
+        <ion-button expand="block" (click)="downloadQRCode()">
+          <ion-icon name="download-outline" slot="start"></ion-icon>
+          Download QR
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

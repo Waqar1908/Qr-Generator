@@ -1,0 +1,22 @@
+.qr-bg {
+  --background: linear-gradient(to bottom right, #dfe9f3, #ffffff);
+}
+
+.qr-card {
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.qr-preview {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+}
+
+.download-btn {
+  margin-top: 20px;
+}
